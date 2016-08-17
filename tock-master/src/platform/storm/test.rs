@@ -1,14 +1,15 @@
-//extern crate libc;
-
 /*
-struct UN_256bitValue {
-    x: [u32; 8]
-}
 
-struct UN_512bitValue{
-  x: [u32; 16]
+This is a implmentation of curve25519 based on http://munacl.cryptojedi.org/data/curve25519-cortexm0-20150813.tar.bz2 by Michal Dull, Bjorn Hasse, Gesine Hinterwalder, Michael Hutter, Chirstof Paar, Ana Helena Sanchex, and Peter Schwabe
+See https://eprint.iacr.org/2015/343.pdf for their paper desribing the work
 
-}
+Originally on baremetal in c, this work converts all c code into rust, on the tock os system. In addition, support for m4 was created, meaning that umull was used in the assembly progrrams to speed up computation.
+
+The two main functions are 
+
+
+
+
 */
 use sam4l::ast;
 use hil::alarm::{Alarm, AlarmClient, Freq16Khz};
