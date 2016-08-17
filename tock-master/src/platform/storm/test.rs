@@ -7,10 +7,15 @@ Originally on baremetal in c, this work converts all c code into rust, on the to
 
 The two main functions are 
 
+Notice that all inputs are [u8;32], which is akin to the original's imlementation of 32 c programming char's.
 
+crypto_scalarmult_curve25519_base(&mut result,&private_key) - this raises 9 by the private key and stores in result. The private key must be a 32 u8 arrray of {0,8,16,...,248},{0,1,2,3,...,(2^251)-1}^30,{}
 
+crypto_scalarmult_curve25519(&mut result,&alice_private_key,&bob_result) - this function raises bob_results by alice_private_key and stores in result.
 
 */
+
+
 use sam4l::ast;
 use hil::alarm::{Alarm, AlarmClient, Freq16Khz};
 
